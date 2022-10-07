@@ -7,11 +7,11 @@ body {
 }
 
 .repos-container {
-  width: 65%;
+  width: 60%;
   background-color: #f6f6f6;
-  margin: 100px auto;
+  margin: 55px auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .repos-container {
     width: 95%;
   }
@@ -29,6 +29,7 @@ body {
   border: none;
   font-size: 20px;
   height: 54px;
+  border-radius: 4px;
 }
 @media (max-width: 400px) {
   .repos-container .get-repos input {
@@ -50,6 +51,11 @@ body {
   text-align: center;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 @media (max-width: 500px) {
   .repos-container .get-repos .get-btn {
@@ -60,4 +66,98 @@ body {
 .repos-container .show-data {
   padding: 20px;
   background-color: #e0e0e0;
+  height: 505px;
+  overflow: auto;
+}
+@media (max-width: 390px) {
+  .repos-container .show-data {
+    height: 590px;
+  }
+}
+
+.repos-container .show-data .noData {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.repos-container .show-data .repo-cont {
+  background-color: #fff;
+  padding: 15px;
+  display: flex;
+}
+
+.repos-container .show-data .repo-cont .repoName {
+  width: 55%;
+  word-wrap: break-word;
+}
+
+@media (max-width: 630px) {
+  .repos-container .show-data .repo-cont {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .repos-container .show-data {
+    padding: 10px;
+  }
+}
+
+.repos-container .show-data .repo-cont:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.repos-container .show-data .repo-cont a,
+.repos-container .show-data .repo-cont span {
+  /* float: right; */ /* i used flex instead of float.*/
+  color: #fff;
+  font-size: 13px;
+  margin-left: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  padding: 4px;
+  width: 80px;
+  text-align: center;
+  height: 70%;
+}
+@media (max-width: 630px) {
+  .repos-container .show-data .repo-cont a,
+  .repos-container .show-data .repo-cont span {
+    width: 55px;
+    font-size: 10px;
+  }
+}
+
+.repos-container .show-data .repo-cont a {
+  background-color: #f44336;
+  text-decoration: none;
+}
+.repos-container .show-data .repo-cont span {
+  background-color: #009688;
+  margin-left: auto;
+}
+
+.repos-container .show-data::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.repos-container .show-data::-webkit-scrollbar-track {
+  border: 1px solid #009688;
+  border-radius: 10px;
+}
+
+.repos-container .show-data::-webkit-scrollbar-thumb {
+  background: #009688;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.repos-container .show-data::-webkit-scrollbar-thumb:hover {
+  background: #009688;
 }
